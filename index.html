@@ -16,11 +16,12 @@
   <!-- Custom styles for this template -->
   <link href="css/alert_dash.css" rel="stylesheet">
 
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 </head>
 
 <body onload = "loadXMLDoc();">
-  
-
 
 <!-- SIDEBAR -->
 
@@ -31,11 +32,8 @@
     <div class="sidebar-heading">FedEx Alert Dashboard </div>
     <div class="list-group list-group-flush">
       <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Data</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Settings</a>
     </div>
   </div>
   <!-- /#sidebar-wrapper -->
@@ -45,7 +43,9 @@
 
     <!-- Top navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-      <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+      <button class="btn btn-primary" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+      </button>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,18 +57,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            <a class="nav-link" href="#">Sign in</a>
           </li>
         </ul>
       </div>
@@ -246,80 +235,9 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-    
-    function loadXMLDoc() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          myFunction(this);
-        }
-      };
-      xmlhttp.open("GET", "alert.xml" , true);
-      xmlhttp.send();
-  }
 
-  function myFunction(xml) {
-    var x, i, xmlDoc, title, type, severity;
-    var head_jum, para, node_p, node_h, element;
-    var node_info;
-    xmlDoc = xml.responseXML;
-
-    // Add alert to html
-    x = xmlDoc.getElementsByTagName("alert")
-    for (i = 0; i < x.length; i++) 
-    { 
-      // Extract XML data
-      title = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-      type = x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue;
-      severity = x[i].getElementsByTagName("severity")[0].childNodes[0].nodeValue;
-      alert = type + "<br>" + severity + "<br>" + 
-      x[i].getElementsByTagName("time")[0].childNodes[0].nodeValue + "<br>" +
-      x[i].getElementsByTagName("notes")[0].childNodes[0].nodeValue + "<br>";
-
-      // If critical, add to jumbotron
-      if (severity == "Critical")
-      {
-        // Make new row div
-        var d_row = document.createElement("div");
-        d_row.className = "row";
-        var d_col = document.createElement("div");
-        d_col.className = "col-md-7";
-        var d_text = document.createElement("div");
-        d_text.className = "col-md-5";
-
-        // Create h tag and add to div
-        head_jum = document.createElement("h3");
-        node_h = document.createTextNode(title);
-        head_jum.appendChild(node_h);
-        d_text.appendChild(head_jum);
-
-        // Create p tag and add to div
-        para = document.createElement("p");
-        para.innerHTML = alert;
-        d_text.appendChild(para);
-
-        // Add everything to jumbotron
-        element = document.getElementById("crit-alerts");
-        element.appendChild(d_row);
-        d_row.appendChild(d_col);
-        d_row.appendChild(d_text);
-      }
-
-      // Add to corresponding column - maybe do same as in if and
-      // Then do if statements on where to add it
-
-    }
- 
-  }
-
-  </script>
+  <!--Custom JavaScript-->
+  <script src="alert_functions.js"></script>
 
 </body>
 
