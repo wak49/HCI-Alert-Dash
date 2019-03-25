@@ -56,17 +56,22 @@ function printData() {
     addAllAlerts();
 }
 
+
+
 // Adds critical alerts to page
 function addToPageCrit(value, index, array) {
     // Select jumbotron element
     var element = document.getElementById("crit-alerts");
     
     // Create header 
-    var header = document.createElement("h3");
-    header.innerHTML = value[2] + " Alert: " + value[0];
+    var header = document.createElement("h4");
+    header.innerHTML = "Critical Alert: " + value[1] + " " + value[3]
+
 
     // Create p tag for alert info
     var info = document.createElement("p");
+
+    // info.innerHTML = "<table><tr><td>" + value[0] + "</td><td> " + value[3] + "</td><td>" + value[4] + "</td></tr></table>"
     info.innerHTML = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
 
     // Put header and info in a div
@@ -75,14 +80,57 @@ function addToPageCrit(value, index, array) {
     div_1.appendChild(header);
     div_1.appendChild(info);
 
-    // Create buttons
-    var b_edit = document.createElement("a");
+    //Create buttons
+    var b_edit = document.createElement("button");
     b_edit.className = "btn btn-primary-edit-crit";
+    b_edit.id = value[5];
+    // b_edit.toggle = "modal";
+    // b_edit.target = "#myModal";
     b_edit.innerHTML = "View";
 
-    var b_clear = document.createElement("a");
+    // var b_edit_modal_div = document.createElement("div");
+    // b_edit_modal_div.className = "modal fade";
+    // b_edit_modal_div.id = "myModal";
+    // b_edit_modal_div.role="dialog";
+
+    // var b_edit_modal_content_div = document.createElement("div");
+    // b_edit_modal_content_div.className ="modal-content";
+
+    // var b_edit_modal_content_div_header_div = document.createElement("div");
+    // b_edit_modal_content_div_header_div.className = "modal-header";
+
+    // var b_edit_modal_content_div_head_div_dismiss_btn = document.createElement("button");
+    // b_edit_modal_content_div_head_div_dismiss_btn.type = "button";
+    // b_edit_modal_content_div_head_div_dismiss_btn.className = "close";
+    // b_edit_modal_content_div_head_div_dismiss_btn.data-dismiss = "modal";
+    // b_edit_modal_content_div_head_div_dismiss_btn.innerHTML = "Dismiss";
+
+    // var b_model_body = document.createElement("p");
+    // b_model_body.innerHTML = "body stuff goes here";
+
+    // var b_edit_modal_content_div_head_div_close_btn = document.createElement("button");
+    // b_edit_modal_content_div_head_div_close_btn.type = "button";
+    // b_edit_modal_content_div_head_div_close_btn.className = "default btn";
+    // b_edit_modal_content_div_head_div_close_btn.data-dismiss="modal";
+    // b_edit_modal_content_div_head_div_close_btn.innerHTML = "Close";
+
+    //         <button type="button" class="close" data-dismiss="modal">&times;</button>
+//         <h4 class="modal-title">Modal Header</h4>
+//       </div>
+//       <div class="modal-body">
+//         <p>Some text in the modal.</p>
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+//       </div>
+//     </div>
+    
+
+    var b_clear = document.createElement("div");
     b_clear.className = "btn btn-primary-clear-crit";
+    b_clear.id = value[5]
     b_clear.innerHTML = "Dismiss";
+
     b_edit.style.color = "#fff";
     b_clear.style.color = "#fff";
     
@@ -100,8 +148,16 @@ function addToPageCrit(value, index, array) {
     div_row.appendChild(div_2);
 
     element.appendChild(div_row);
+
+
 }
 
+
+function removeCritAlert(id) {
+    var element = document.getElementById(id);
+    element.parentNode.removeChild(element);
+
+}
 
 // Adds all alert to the page
 function addAllAlerts() {
