@@ -72,8 +72,21 @@ function addToPageCrit(value, index, array) {
 
     // Create p tag for alert info
     var info = document.createElement("p");
-
     info.innerHTML = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
+
+    var modal_div = document.createElement("div");
+    modal_div.className = "modal";
+    modal_div.id = "my_modal";
+
+    var modal_content = document.createElement("div");
+    modal_content.className = "modal-content";
+
+    var modal_span = document.createElement("span");
+    modal_span.className = "close";
+
+    var modal_p = document.createElement("p");
+    //p.innerHTML = "modal text here";
+
 
     // Put header and info in a div
     var div_1 = document.createElement("div");
@@ -85,6 +98,16 @@ function addToPageCrit(value, index, array) {
     var b_edit = document.createElement("button");
     b_edit.className = "btn btn-primary-edit-crit";
     b_edit.innerHTML = "View";
+
+    var modal = document.getElementById('my_modal');
+    var btn = document.getElementById("b_edit");
+    var span = document.getElementsByClassName("close")[0];
+    b_edit.onclick = function () { alert('hello!'); };
+
+    //modal button does not work yet
+    //b_edit.onclick = function () { modal.style.display = "block" };
+    //span.onclick = function() { modal.style.display = "none" };
+
 
     var b_clear = document.createElement("button");
     b_clear.className = "btn btn-primary-clear-crit";
@@ -105,7 +128,6 @@ function addToPageCrit(value, index, array) {
     // Create div for row
     var div_row = document.createElement("div");
     div_row.className = "row-crit";
-    //div_row.id = "UID:" + value[5];
     div_row.id = "crit_alert_rows";
     div_row.appendChild(div_1);
     div_row.appendChild(div_2);
@@ -113,15 +135,6 @@ function addToPageCrit(value, index, array) {
     element.appendChild(div_row);
 
 }
-
-
-function removeElement(elementId) {
-    // Removes an element from the document
-    var element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
-}
-
-
 
 // Adds all alert to the page
 function addAllAlerts() {
@@ -157,7 +170,7 @@ function addAllAlerts() {
         vol_edit.innerHTML = "Edit";
         var vol_clear = document.createElement("a");
         vol_clear.className = "btn btn-primary-clear";
-        vol_clear.innerHTML = "Clear";
+        vol_clear.innerHTML = "Dismiss";
         footer_vol.appendChild(vol_edit);
         footer_vol.appendChild(vol_clear);
 
@@ -173,6 +186,7 @@ function addAllAlerts() {
         // Create Timing alert elements
         var div_tim = document.createElement("div");
         div_tim.className = "col-lg-3 col-md-6 mb-4";
+        div_tim.id = "time-div"
         var card_tim = document.createElement("div");
         card_tim.className = "card h-100";
         var cardbody_tim = document.createElement("div");
@@ -192,9 +206,14 @@ function addAllAlerts() {
         tim_edit.innerHTML = "Edit";
         var tim_clear = document.createElement("a");
         tim_clear.className = "btn btn-primary-clear";
-        tim_clear.innerHTML = "Clear";
+        tim_clear.innerHTML = "Dismiss";
+
+        //this breaks the table
+        //tim_clear.onclick = function () { var temp = document.getElementById("time-div"); temp.parentNode.removeChild(temp); };
+
         footer_tim.appendChild(tim_edit);
         footer_tim.appendChild(tim_clear);
+
 
         // Add Timing alerts to row div
         cardbody_tim.appendChild(h_2);
@@ -227,7 +246,7 @@ function addAllAlerts() {
         staf_edit.innerHTML = "Edit";
         var staf_clear = document.createElement("a");
         staf_clear.className = "btn btn-primary-clear";
-        staf_clear.innerHTML = "Clear";
+        staf_clear.innerHTML = "Dismiss";
         footer_staf.appendChild(staf_edit);
         footer_staf.appendChild(staf_clear);
 
@@ -257,12 +276,12 @@ function addAllAlerts() {
         // Create Environmental buttons
         var footer_env = document.createElement("div");
         footer_env.className = "card-footer";
-        var env_edit = document.createElement("a");
+        var env_edit = document.createElement("button");
         env_edit.className = "btn btn-primary-edit";
         env_edit.innerHTML = "Edit";
-        var env_clear = document.createElement("a");
+        var env_clear = document.createElement("button");
         env_clear.className = "btn btn-primary-clear";
-        env_clear.innerHTML = "Clear";
+        env_clear.innerHTML = "Dismiss";
         footer_env.appendChild(env_edit);
         footer_env.appendChild(env_clear);
 
@@ -289,7 +308,11 @@ function addAllAlerts() {
     }
 }
 
-
+window.onclick = function(event) {
+    if (event.target ==  modal) {
+        modal.style.display = "none";
+    }
+}
 
 // Toggle filter menu
 window.onclick = function(event) {
