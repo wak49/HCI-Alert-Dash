@@ -102,9 +102,12 @@ function addToPageCrit(value, index, array) {
     var modal = document.getElementById('my_modal');
     var btn = document.getElementById("b_edit");
     var span = document.getElementsByClassName("close")[0];
-    b_edit.onclick = function () { alert('hello!'); };
+    
+    var alert_string = "Critical Alert: " + value[1] + "\n" + value[0] + " " + value[2] + " " + value[3];
 
-    //modal button does not work yet
+    b_edit.onclick = function () { alert(alert_string); };
+
+    //modal button does not work
     //b_edit.onclick = function () { modal.style.display = "block" };
     //span.onclick = function() { modal.style.display = "none" };
 
