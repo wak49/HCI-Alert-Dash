@@ -1,7 +1,0 @@
-<alert>
-<title>Additional inbound truck</title>
-<type>Volume</type>
-<severity>Critical</severity>
-<time>8:35</time>
-<notes>Inbound truck from Atlanta, GA</notes>
-</alert>
