@@ -67,11 +67,12 @@ function addToPageCrit(value, index, array) {
 
     // Create header 
     var header = document.createElement("h4");
-    header.innerHTML = "Critical Alert: " + value[1] + " " + value[3]
+    header.innerHTML = "Critical Alert(" +value[5] + "): " + value[1] + " " + value[3]
 
 
     // Create p tag for alert info
     var info = document.createElement("p");
+    info.id = "UID:" + value[5];
     var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
     if (value[6] != "") {
         alert_string += "<br>Note: " + value[6]
@@ -88,20 +89,29 @@ function addToPageCrit(value, index, array) {
     var b_edit = document.createElement("button");
     b_edit.id = "edit";
     b_edit.className = "btn btn-primary-edit-crit";
-    b_edit.innerHTML = "View";
+    b_edit.innerHTML = "Add Note";
 
-    var alert_string = "Critical Alert: " + value[1] + "\n" + value[0] + " " + value[2] + " " + value[3];
-    b_edit.onclick = div_show;
+    b_edit.onclick = function () {
+        var text;
+        prompt_string = "Enter a note for alert(" + value[3] + " " + value[0] + ": ";
+        var person = prompt(prompt_string);
+        value[6] =  person;
+        document.getElementById("UID:" + value[5]).innerHTML = alert_string + "<br>"+ person;
+        document.getElementById("UID:" + value[5] + "clear").onclick = function () {this.disabled = false; }
+    }
         
     var b_clear = document.createElement("button");
+    b_clear.id = "UID:" + value[5] + "clear";
     b_clear.className = "btn btn-primary-clear-crit";
     b_clear.innerHTML = "Dismiss";
     b_clear.setAttribute("disabled", "true");
-
     if (value[6] != "" ) {
           b_clear.disabled = false;
      }
-    b_clear.onclick = function () { var temp = document.getElementById("crit_alert_rows"); temp.parentNode.removeChild(temp); };
+    b_clear.onclick = function () { 
+        var temp = document.getElementById("crit_alert_rows"); 
+        temp.parentNode.removeChild(temp);
+    };
     
 
     b_edit.style.color = "#fff";
@@ -156,7 +166,7 @@ function addAllAlerts() {
         footer_vol.className = "card-footer";
         var vol_edit = document.createElement("a");
         vol_edit.className = "btn btn-primary-edit";
-        vol_edit.innerHTML = "Edit";
+        vol_edit.innerHTML = "Add Note";
         var vol_clear = document.createElement("a");
         vol_clear.className = "btn btn-primary-clear";
         vol_clear.innerHTML = "Dismiss";
@@ -192,7 +202,7 @@ function addAllAlerts() {
         footer_tim.className = "card-footer";
         var tim_edit = document.createElement("a");
         tim_edit.className = "btn btn-primary-edit";
-        tim_edit.innerHTML = "Edit";
+        tim_edit.innerHTML = "Add Note";
         var tim_clear = document.createElement("a");
         tim_clear.className = "btn btn-primary-clear";
         tim_clear.innerHTML = "Dismiss";
@@ -232,7 +242,7 @@ function addAllAlerts() {
         footer_staf.className = "card-footer";
         var staf_edit = document.createElement("a");
         staf_edit.className = "btn btn-primary-edit";
-        staf_edit.innerHTML = "Edit";
+        staf_edit.innerHTML = "Add Note";
         var staf_clear = document.createElement("a");
         staf_clear.className = "btn btn-primary-clear";
         staf_clear.innerHTML = "Dismiss";
@@ -267,7 +277,7 @@ function addAllAlerts() {
         footer_env.className = "card-footer";
         var env_edit = document.createElement("button");
         env_edit.className = "btn btn-primary-edit";
-        env_edit.innerHTML = "Edit";
+        env_edit.innerHTML = "Add Note";
         var env_clear = document.createElement("button");
         env_clear.className = "btn btn-primary-clear";
         env_clear.innerHTML = "Dismiss";

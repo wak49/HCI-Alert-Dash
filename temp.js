@@ -72,6 +72,7 @@ function addToPageCrit(value, index, array) {
 
     // Create p tag for alert info
     var info = document.createElement("p");
+    info.id = "alert_body";
     var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
     if (value[6] != "") {
         alert_string += "<br>Note: " + value[6]
@@ -90,14 +91,17 @@ function addToPageCrit(value, index, array) {
     b_edit.className = "btn btn-primary-edit-crit";
     b_edit.innerHTML = "View";
 
-    var alert_string = "Critical Alert: " + value[1] + "\n" + value[0] + " " + value[2] + " " + value[3];
-    b_edit.onclick = div_show;
+    b_edit.onclick = function () {
+        var text;
+        prompt_string = "Enver a note for alert(" + value[3] + " " + value[0] + ": ";
+        var person = prompt(prompt_string);
+        document.getElementById("alert_body").innerHTML = alert_string + " "+ person;
+    }
         
     var b_clear = document.createElement("button");
     b_clear.className = "btn btn-primary-clear-crit";
     b_clear.innerHTML = "Dismiss";
     b_clear.setAttribute("disabled", "true");
-
     if (value[6] != "" ) {
           b_clear.disabled = false;
      }
