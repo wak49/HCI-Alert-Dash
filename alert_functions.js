@@ -7,7 +7,7 @@ $("#menu-toggle").click(function(e) {
 // Toggle the filter menu
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-    }
+}
   
 // Read alert data from CSV file
 var data;
@@ -84,47 +84,9 @@ function addToPageCrit(value, index, array) {
     var b_edit = document.createElement("button");
     b_edit.className = "btn btn-primary-edit-crit";
     b_edit.id = value[5];
-    // b_edit.toggle = "modal";
-    // b_edit.target = "#myModal";
     b_edit.innerHTML = "View";
 
-    // var b_edit_modal_div = document.createElement("div");
-    // b_edit_modal_div.className = "modal fade";
-    // b_edit_modal_div.id = "myModal";
-    // b_edit_modal_div.role="dialog";
-
-    // var b_edit_modal_content_div = document.createElement("div");
-    // b_edit_modal_content_div.className ="modal-content";
-
-    // var b_edit_modal_content_div_header_div = document.createElement("div");
-    // b_edit_modal_content_div_header_div.className = "modal-header";
-
-    // var b_edit_modal_content_div_head_div_dismiss_btn = document.createElement("button");
-    // b_edit_modal_content_div_head_div_dismiss_btn.type = "button";
-    // b_edit_modal_content_div_head_div_dismiss_btn.className = "close";
-    // b_edit_modal_content_div_head_div_dismiss_btn.data-dismiss = "modal";
-    // b_edit_modal_content_div_head_div_dismiss_btn.innerHTML = "Dismiss";
-
-    // var b_model_body = document.createElement("p");
-    // b_model_body.innerHTML = "body stuff goes here";
-
-    // var b_edit_modal_content_div_head_div_close_btn = document.createElement("button");
-    // b_edit_modal_content_div_head_div_close_btn.type = "button";
-    // b_edit_modal_content_div_head_div_close_btn.className = "default btn";
-    // b_edit_modal_content_div_head_div_close_btn.data-dismiss="modal";
-    // b_edit_modal_content_div_head_div_close_btn.innerHTML = "Close";
-
-    //         <button type="button" class="close" data-dismiss="modal">&times;</button>
-//         <h4 class="modal-title">Modal Header</h4>
-//       </div>
-//       <div class="modal-body">
-//         <p>Some text in the modal.</p>
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-//       </div>
-//     </div>
-    
+   
 
     var b_clear = document.createElement("div");
     b_clear.className = "btn btn-primary-clear-crit";
