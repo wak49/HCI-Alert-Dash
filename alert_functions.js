@@ -72,7 +72,11 @@ function addToPageCrit(value, index, array) {
 
     // Create p tag for alert info
     var info = document.createElement("p");
-    info.innerHTML = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
+    var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
+    if (value[6] != "") {
+        alert_string += "<br>Note: " + value[6]
+    }
+    info.innerHTML = alert_string;
 
     // Put header and info in a div
     var div_1 = document.createElement("div");
