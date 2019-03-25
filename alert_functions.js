@@ -469,7 +469,10 @@ function sortByTime() {
     staff = staff.sort(ComparatorTime);
     environ = environ.sort(ComparatorTime);
     console.log(staff);
-
+    v = 0;
+    t = 0;
+    s = 0;
+    e = 0;
     // Call printing function
     addAllAlerts();
 }
@@ -488,7 +491,10 @@ function sortbySeverity() {
     timing = timing.sort(ComparatorSeverity);
     staff = staff.sort(ComparatorSeverity);
     environ = environ.sort(ComparatorSeverity);
-
+    v = 0;
+    t = 0;
+    s = 0;
+    e = 0;
     // Call printing function
     addAllAlerts();
 }
