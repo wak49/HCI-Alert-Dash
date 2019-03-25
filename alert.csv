@@ -5,5 +5,5 @@ Late Plane,Timing,Critical,12:05  3/25/19,Original arrival time 11:30,2,
 Unexpected ratio of time-definite services in inbound volume,Timing,Moderate,15:01,Black Friday,3,
 Unscheduled employees on the clock,Staff,Moderate,13:12  3/25/19,3 employees since 8:00,4
 More than 15% of a given staff type not clocked in by start time,Staff,Critical,15:27,Train Stopped on Tracks,5,Thsi is a note after the alert is resolved
-National Weather Service alert issued for the service area,Environmental,Critical,13:00,Tornado warning until 10:00, 6, this is another note
+National Weather Service alert issued for the service area,Environmental,Critical,13:00,Tornado warning until 10:00,6, this is another note
 Significant traffic disruptions,Environmental,Moderate,12:57,Severe traffic along I-10,6, this is not a note.

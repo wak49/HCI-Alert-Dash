@@ -91,13 +91,15 @@ function addToPageCrit(value, index, array) {
     b_edit.className = "btn btn-primary-edit-crit";
     b_edit.innerHTML = "Add Note";
 
+    //grab  anote from the user and unblock the dismiss button
     b_edit.onclick = function () {
         var text;
         prompt_string = "Enter a note for alert(" + value[3] + " " + value[0] + ": ";
-        var person = prompt(prompt_string);
-        value[6] =  person;
-        document.getElementById("UID:" + value[5]).innerHTML = alert_string + "<br>"+ person;
-        document.getElementById("UID:" + value[5] + "clear").onclick = function () {this.disabled = false; }
+        var note = prompt(prompt_string);
+        value[6] =  note;
+        alert_string += "<br>" + note;
+        document.getElementById("UID:" + value[5]).innerHTML = alert_string;
+        b_clear.disabled = false;
     }
         
     var b_clear = document.createElement("button");
@@ -107,17 +109,15 @@ function addToPageCrit(value, index, array) {
     b_clear.setAttribute("disabled", "true");
     if (value[6] != "" ) {
           b_clear.disabled = false;
-     }
+    }
     b_clear.onclick = function () { 
         var temp = document.getElementById("crit_alert_rows"); 
         temp.parentNode.removeChild(temp);
     };
     
-
     b_edit.style.color = "#fff";
     b_clear.style.color = "#fff";
     
-
     // Put buttons in a div
     var div_2 = document.createElement("div");
     div_2.className = "col-md-5";
