@@ -63,7 +63,7 @@ function addToPageCrit(value, index, array) {
     
     // Create header 
     var header = document.createElement("h3");
-    header.innerHTML = value[0];
+    header.innerHTML = value[2] + " Alert: " + value[0];
 
     // Create p tag for alert info
     var info = document.createElement("p");
@@ -78,10 +78,11 @@ function addToPageCrit(value, index, array) {
     // Create buttons
     var b_edit = document.createElement("a");
     b_edit.className = "btn btn-primary-edit-crit";
-    b_edit.innerHTML = "Edit";
+    b_edit.innerHTML = "View";
+
     var b_clear = document.createElement("a");
     b_clear.className = "btn btn-primary-clear-crit";
-    b_clear.innerHTML = "Clear";
+    b_clear.innerHTML = "Dismiss";
     b_edit.style.color = "#fff";
     b_clear.style.color = "#fff";
     

@@ -2,8 +2,8 @@ Title,Type,Severity,Time,Notes
 Additional inbound plane,Volume,Critical,09:24,"Inbound plane from Seattle, WA"
 Additional inbound truck,Volume,Critical,08:35,"Inbound truck from Atlanta, GA"
 Late Plane,Timing,Critical,12:05,Original arrival time 11:30
-Unexpected ratio of time-definite services in inbound volume,Timing,Moderate,15:01,
+Unexpected ratio of time-definite services in inbound volume,Timing,Moderate,15:01,Black Friday
 Unscheduled employees on the clock,Staff,Moderate,13:12,3 employees since 8:00
-More than 15% of a given staff type not clocked in by start time,Staff,Critical,15:27,
+More than 15% of a given staff type not clocked in by start time,Staff,Critical,15:27,Train Stopped on Tracks
 National Weather Service alert issued for the service area,Environmental,Critical,13:00,Tornado warning until 10:00
 Significant traffic disruptions,Environmental,Moderate,12:57,Severe traffic along I-10
