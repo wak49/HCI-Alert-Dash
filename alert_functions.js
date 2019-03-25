@@ -62,7 +62,9 @@ function printData() {
 function addToPageCrit(value, index, array) {
     // Select jumbotron element
     var element = document.getElementById("crit-alerts");
-    
+
+
+
     // Create header 
     var header = document.createElement("h4");
     header.innerHTML = "Critical Alert: " + value[1] + " " + value[3]
@@ -71,7 +73,6 @@ function addToPageCrit(value, index, array) {
     // Create p tag for alert info
     var info = document.createElement("p");
 
-    // info.innerHTML = "<table><tr><td>" + value[0] + "</td><td> " + value[3] + "</td><td>" + value[4] + "</td></tr></table>"
     info.innerHTML = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
 
     // Put header and info in a div
@@ -83,15 +84,13 @@ function addToPageCrit(value, index, array) {
     //Create buttons
     var b_edit = document.createElement("button");
     b_edit.className = "btn btn-primary-edit-crit";
-    b_edit.id = value[5];
     b_edit.innerHTML = "View";
 
-   
-
-    var b_clear = document.createElement("div");
+    var b_clear = document.createElement("button");
     b_clear.className = "btn btn-primary-clear-crit";
-    b_clear.id = value[5]
     b_clear.innerHTML = "Dismiss";
+    b_clear.onclick = function () { var temp = document.getElementById("crit_alert_rows"); temp.parentNode.removeChild(temp); };
+    
 
     b_edit.style.color = "#fff";
     b_clear.style.color = "#fff";
@@ -106,20 +105,23 @@ function addToPageCrit(value, index, array) {
     // Create div for row
     var div_row = document.createElement("div");
     div_row.className = "row-crit";
+    //div_row.id = "UID:" + value[5];
+    div_row.id = "crit_alert_rows";
     div_row.appendChild(div_1);
     div_row.appendChild(div_2);
 
     element.appendChild(div_row);
 
-
 }
 
 
-function removeCritAlert(id) {
-    var element = document.getElementById(id);
+function removeElement(elementId) {
+    // Removes an element from the document
+    var element = document.getElementById(elementId);
     element.parentNode.removeChild(element);
-
 }
+
+
 
 // Adds all alert to the page
 function addAllAlerts() {
