@@ -4,6 +4,11 @@ $("#menu-toggle").click(function(e) {
     $("#wrapper").toggleClass("toggled");
 });
 
+// Toggle the filter menu
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+  
 // Read alert data from CSV file
 var data;
 var volume = [];
@@ -41,6 +46,7 @@ function initialSortByType(value, index, array) {
         if (value[2] == "Critical") {
             critical.push(value);
         }
+        critical = critical.sort(ComparatorTime);
     }
 }
 
@@ -71,11 +77,14 @@ function addToPageCrit(value, index, array) {
 
     // Create buttons
     var b_edit = document.createElement("a");
-    b_edit.className = "btn btn-primary";
+    b_edit.className = "btn btn-primary-edit-crit";
     b_edit.innerHTML = "Edit";
     var b_clear = document.createElement("a");
-    b_clear.className = "btn btn-primary";
+    b_clear.className = "btn btn-primary-clear-crit";
     b_clear.innerHTML = "Clear";
+    b_edit.style.color = "#fff";
+    b_clear.style.color = "#fff";
+    
 
     // Put buttons in a div
     var div_2 = document.createElement("div");
@@ -85,7 +94,7 @@ function addToPageCrit(value, index, array) {
 
     // Create div for row
     var div_row = document.createElement("div");
-    div_row.className = "row";
+    div_row.className = "row-crit";
     div_row.appendChild(div_1);
     div_row.appendChild(div_2);
 
@@ -95,11 +104,13 @@ function addToPageCrit(value, index, array) {
 
 // Adds all alert to the page
 function addAllAlerts() {
+    // Select row container element
+    var element = document.getElementById("all-alerts");
+    element.innerHTML = "";
     // Only iterates twice to make 2 rows
     for (var i = 0; i < 2; i++)
     {
-        // Select row container element and create a new row
-        var element = document.getElementById("all-alerts");
+        // Create a new row
         var div_row = document.createElement("div");
         div_row.className = "row text-center";
 
@@ -115,16 +126,16 @@ function addAllAlerts() {
         h_1.innerHTML = volume[i][0];
         var info_vol = document.createElement("p");
         info_vol.className = "card-text";
-        info_vol.innerHTML = volume[i][1] + "<br>" + volume[i][2] + "<br>" + volume[i][3] + "<br>" + volume[i][4];
+        info_vol.innerHTML = volume[i][2] + "<br>" + volume[i][3] + "<br>" + volume[i][4];
 
         // Create Volume buttons
         var footer_vol = document.createElement("div");
         footer_vol.className = "card-footer";
         var vol_edit = document.createElement("a");
-        vol_edit.className = "btn btn-primary";
+        vol_edit.className = "btn btn-primary-edit";
         vol_edit.innerHTML = "Edit";
         var vol_clear = document.createElement("a");
-        vol_clear.className = "btn btn-primary";
+        vol_clear.className = "btn btn-primary-clear";
         vol_clear.innerHTML = "Clear";
         footer_vol.appendChild(vol_edit);
         footer_vol.appendChild(vol_clear);
@@ -150,16 +161,16 @@ function addAllAlerts() {
         h_2.innerHTML = timing[i][0];
         var info_tim = document.createElement("p");
         info_tim.className = "card-text";
-        info_tim.innerHTML = timing[i][1] + "<br>" + timing[i][2] + "<br>" + timing[i][3] + "<br>" + timing[i][4];
+        info_tim.innerHTML = timing[i][2] + "<br>" + timing[i][3] + "<br>" + timing[i][4];
 
         // Create Timing buttons
         var footer_tim = document.createElement("div");
         footer_tim.className = "card-footer";
         var tim_edit = document.createElement("a");
-        tim_edit.className = "btn btn-primary";
+        tim_edit.className = "btn btn-primary-edit";
         tim_edit.innerHTML = "Edit";
         var tim_clear = document.createElement("a");
-        tim_clear.className = "btn btn-primary";
+        tim_clear.className = "btn btn-primary-clear";
         tim_clear.innerHTML = "Clear";
         footer_tim.appendChild(tim_edit);
         footer_tim.appendChild(tim_clear);
@@ -185,16 +196,16 @@ function addAllAlerts() {
         h_3.innerHTML = staff[i][0];
         var info_staf = document.createElement("p");
         info_staf.className = "card-text";
-        info_staf.innerHTML = staff[i][1] + "<br>" + staff[i][2] + "<br>" + staff[i][3] + "<br>" + staff[i][4];
+        info_staf.innerHTML = staff[i][2] + "<br>" + staff[i][3] + "<br>" + staff[i][4];
         
         // Create Staff buttons
         var footer_staf = document.createElement("div");
         footer_staf.className = "card-footer";
         var staf_edit = document.createElement("a");
-        staf_edit.className = "btn btn-primary";
+        staf_edit.className = "btn btn-primary-edit";
         staf_edit.innerHTML = "Edit";
         var staf_clear = document.createElement("a");
-        staf_clear.className = "btn btn-primary";
+        staf_clear.className = "btn btn-primary-clear";
         staf_clear.innerHTML = "Clear";
         footer_staf.appendChild(staf_edit);
         footer_staf.appendChild(staf_clear);
@@ -220,16 +231,16 @@ function addAllAlerts() {
         h_4.innerHTML = environ[i][0];
         var info_env = document.createElement("p");
         info_env.className = "card-text";
-        info_env.innerHTML = environ[i][1] + "<br>" + environ[i][2] + "<br>" + environ[i][3] + "<br>" + environ[i][4];
+        info_env.innerHTML = environ[i][2] + "<br>" + environ[i][3] + "<br>" + environ[i][4];
 
         // Create Environmental buttons
         var footer_env = document.createElement("div");
         footer_env.className = "card-footer";
         var env_edit = document.createElement("a");
-        env_edit.className = "btn btn-primary";
+        env_edit.className = "btn btn-primary-edit";
         env_edit.innerHTML = "Edit";
         var env_clear = document.createElement("a");
-        env_clear.className = "btn btn-primary";
+        env_clear.className = "btn btn-primary-clear";
         env_clear.innerHTML = "Clear";
         footer_env.appendChild(env_edit);
         footer_env.appendChild(env_clear);
@@ -242,8 +253,72 @@ function addAllAlerts() {
         div_env.appendChild(card_env);
         div_row.appendChild(div_env);
 
+
+        vol_edit.style.color = "#fff";
+        vol_clear.style.color = "#fff";
+        tim_edit.style.color = "#fff";
+        tim_clear.style.color = "#fff";
+        staf_edit.style.color = "#fff";
+        staf_clear.style.color = "#fff";
+        env_edit.style.color = "#fff";
+        env_clear.style.color = "#fff";
         // Add row to container element
         element.appendChild(div_row);
 
     }
 }
+
+
+
+// Toggle filter menu
+window.onclick = function(event) {
+    if (!event.target.matches('#dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+// Compare function for sortByTime
+function ComparatorTime(a, b) {
+    if (a[3] < b[3]) return -1;
+    if (a[3] > b[3]) return 1;
+    return 0;
+}
+// Sort alerts by time and print
+function sortByTime() {
+    // Sort
+    volume = volume.sort(ComparatorTime);
+    timing = timing.sort(ComparatorTime);
+    staff = staff.sort(ComparatorTime);
+    environ = environ.sort(ComparatorTime);
+    console.log(staff);
+
+    // Call printing function
+    addAllAlerts();
+}
+
+
+// Compare function for sortBySeverity
+function ComparatorSeverity(a, b) {
+    if (a[2] < b[2]) return -1;
+    if (a[2] > b[2]) return 1;
+    return 0;
+}
+// Sort alerts by severity and print
+function sortbySeverity() {
+    // Sort
+    volume = volume.sort(ComparatorSeverity);
+    timing = timing.sort(ComparatorSeverity);
+    staff = staff.sort(ComparatorSeverity);
+    environ = environ.sort(ComparatorSeverity);
+
+    // Call printing function
+    addAllAlerts();
+}
+
