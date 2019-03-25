@@ -88,8 +88,8 @@ position: relative;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  width: 100px;
-  height: 40px;
+  width: 5em;
+  height: 2.5em;
 }
 /* Dropdown button on hover & focus */
 #dropbtn:hover, #dropbtn:focus {
@@ -98,7 +98,7 @@ position: relative;
 }
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
   padding: 14px;
   top: -1.4em;
@@ -107,16 +107,20 @@ position: relative;
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #f1f1f1;
-  min-width: 160px;
+
+  margin-right: 0em;
+  margin-left: 50.3em;
+  margin-top: 3.4em;
+  min-width: 6em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.6em;
   text-decoration: none;
   display: block;
 }
@@ -131,9 +135,9 @@ position: relative;
   background-color: #007bff;
   border-color: #007bff;
   position: relative;
-  left: 200px;
-  top: 6.7em;
-  width: 63px;
+  left: 10em;
+  top: 6em;
+  width: 7em;
 }
 
 .btn-primary-edit-crit:hover {
@@ -171,8 +175,8 @@ position: relative;
   background-color: #007bff;
   border-color: #007bff;
   position: relative;
-  left: 250px;
-  top: 6.7em;
+  left: 11.5em;
+  top: 6em;
 }
 
 .btn-primary-clear-crit:hover {
@@ -212,7 +216,7 @@ position: relative;
   border-color: #007bff;
   position: relative;
   right: 10px;
-  width: 63px;
+  width: 6em;
 }
 
 .btn-primary-edit:hover {
