@@ -74,20 +74,6 @@ function addToPageCrit(value, index, array) {
     var info = document.createElement("p");
     info.innerHTML = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
 
-    var modal_div = document.createElement("div");
-    modal_div.className = "modal";
-    modal_div.id = "my_modal";
-
-    var modal_content = document.createElement("div");
-    modal_content.className = "modal-content";
-
-    var modal_span = document.createElement("span");
-    modal_span.className = "close";
-
-    var modal_p = document.createElement("p");
-    //p.innerHTML = "modal text here";
-
-
     // Put header and info in a div
     var div_1 = document.createElement("div");
     div_1.className = "col-md-7";
@@ -96,22 +82,13 @@ function addToPageCrit(value, index, array) {
 
     //Create buttons
     var b_edit = document.createElement("button");
+    b_edit.id = "edit";
     b_edit.className = "btn btn-primary-edit-crit";
     b_edit.innerHTML = "View";
 
-    var modal = document.getElementById('my_modal');
-    var btn = document.getElementById("b_edit");
-    var span = document.getElementsByClassName("close")[0];
-    
     var alert_string = "Critical Alert: " + value[1] + "\n" + value[0] + " " + value[2] + " " + value[3];
-
-    b_edit.onclick = function () { alert(alert_string); };
-
-    //modal button does not work
-    //b_edit.onclick = function () { modal.style.display = "block" };
-    //span.onclick = function() { modal.style.display = "none" };
-
-
+    b_edit.onclick = function () { alert(alert_string) };
+        
     var b_clear = document.createElement("button");
     b_clear.className = "btn btn-primary-clear-crit";
     b_clear.innerHTML = "Dismiss";
@@ -308,12 +285,6 @@ function addAllAlerts() {
         // Add row to container element
         element.appendChild(div_row);
 
-    }
-}
-
-window.onclick = function(event) {
-    if (event.target ==  modal) {
-        modal.style.display = "none";
     }
 }
 
