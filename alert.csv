@@ -1,4 +1,4 @@
-Title,Type,Severity,Time,Notes,UID,Note
+Title,Type,Severity,Time,Description,UID,Note
 Additional inbound plane,Volume,Critical,09:24 3/25/19,"Inbound plane from Seattle, WA",0,
 Additional inbound truck,Volume,Critical,08:35 3/25/19,"Inbound truck from Atlanta, GA",1,
 Late Plane,Timing,Critical,12:05 3/25/19,Original arrival time 11:30 3/25/19,2,
@@ -6,4 +6,9 @@ Unexpected ratio of time-definite services in inbound volume,Timing,Moderate,15:
 Unscheduled employees on the clock,Staff,Moderate,13:12 3/25/19,3 employees since 8:00 3/25/19,4
 More than 15% of a given staff type not clocked in by start time,Staff,Critical,15:2 3/26/19,Train Stopped on Tracks,5,Thsi is a note after the alert is resolved
 National Weather Service alert issued for the service area,Environmental,Critical,13:00 3/26/19,Tornado warning until 10:00,6, this is another note
-Significant traffic disruptions,Environmental,Moderate,12:57 3/26/19,Severe traffic along I-10,6, this is not a note.
+Significant traffic disruptions,Environmental,Moderate,12:57 3/26/19,Severe traffic along I-10,7, this is not a note.
+Low staff, Staff,Critical, 8:05 2/2/19, Flu,8, this is a note
+Plane Crash, Staff,Critical, 9:00 2/6/19, Boeing 737 Max, 9,
+Black Friday, Volume,Critical, 23:00 11/15/19, Thanksgiving rush, 10,
+Possible Blizzard Conditions,Volume, Moderate, 11:11 3/1/19, , 11,
+Possible Blizzard Conditions,Environmental, Moderate, 11:11 3/1/19, , 12,

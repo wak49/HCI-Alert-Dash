@@ -63,12 +63,9 @@ function addToPageCrit(value, index, array) {
     // Select jumbotron element
     var element = document.getElementById("crit-alerts");
 
-
-
     // Create header 
     var header = document.createElement("h4");
     header.innerHTML = "Critical Alert(" +value[5] + "): " + value[1] + " " + value[3]
-
 
     // Create p tag for alert info
     var info = document.createElement("p");
