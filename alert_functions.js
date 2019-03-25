@@ -321,4 +321,3 @@ function sortbySeverity() {
     // Call printing function
     addAllAlerts();
 }
-

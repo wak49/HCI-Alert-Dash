@@ -32,7 +32,7 @@
     <div class="sidebar-heading">FedEx</div>
     <div class="list-group list-group-flush">
       <a href="index.html" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Data</a>
+      <a href="data.html" class="list-group-item list-group-item-action bg-light">Data</a>
       <a href="#" class="list-group-item list-group-item-action bg-light">Settings</a>
     </div>
   </div>
@@ -64,11 +64,22 @@
       </div>
     </nav>
 
+  <div id="chart-container" class="container">
+      <canvas id="myChart"></canvas>
+  </div>
+  <div id="other-alerts" class="row text-center">
+ 
+      
+
+  </div>
 
   </div>
   <!-- /#page-content-wrapper -->
 
 </div>
+
+</div>
+
 </div>
 <!-- /#wrapper -->
 <!--END SIDEBAR-->
@@ -86,10 +97,12 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 
   <!--Custom JavaScript-->
   <script src="alert_functions.js"></script>
+  <script src="data.js"></script>
 
 </body>
 
