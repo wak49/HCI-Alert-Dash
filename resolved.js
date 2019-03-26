@@ -62,38 +62,65 @@ function printData() {
 function addToPageCrit(value, index, array) {
     // Select jumbotron element
     var element = document.getElementById("crit-alerts");
+    var t, r, c;
+    var table_div = document.createElement("div");
+    table_div.className = "table";
+    table_div.id = "table";
+    t = document.createElement("table");
+    t.className = "alert table";
+    t.id = "alert table";
+
+    r = t.insertRow(0);
+    c = r.insertCell(0);    
+    c.style.width = '20px';
+    c.innerHTML = value[6];
+    c = r.insertCell(0);
+    c.style.width = '20px';
+    c.innerHTML = value[4];
+    c = r.insertCell(0);
+    c.style.width = '20px';
+    c.innerHTML = value[3];
+    c = r.insertCell(0);
+    c.style.width = '20px';
+    c.innerHTML = value[2];
+    c = r.insertCell(0);
+    c.style.width = '20px';
+    c.innerHTML = value[0] + " : " + value[1];
+    c = r.insertCell(0);
+    c.style.width = '20px';
+    c.innerHTML = value[5];
+
+    element.appendChild(table_div);
+    table_div.appendChild(t);
 
 
 
-    // Create header 
-    var header = document.createElement("h4");
-    header.innerHTML = "Critical Alert(" +value[5] + "): " + value[1] + " " + value[3]
+    // // Create header 
+    // var header = document.createElement("h4");
+    // header.innerHTML = "Critical Alert(" +value[5] + "): " + value[1] + " " + value[3]
 
+    // // Create p tag for alert info
+    // var info = document.createElement("p");
+    // info.id = "UID:" + value[5];
+    // var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
+    // if (value[6] != "") {
+    //     alert_string += "<br>Note: " + value[6]
+    // }
+    // info.innerHTML = alert_string;
 
-    // Create p tag for alert info
-    var info = document.createElement("p");
-    info.id = "UID:" + value[5];
-    var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
-    if (value[6] != "") {
-        alert_string += "<br>Note: " + value[6]
-    }
-    info.innerHTML = alert_string;
+    // // Put header and info in a div
+    // var div_1 = document.createElement("div");
+    // div_1.className = "col-md-7";
+    // div_1.appendChild(header);
+    // div_1.appendChild(info);
 
-    // Put header and info in a div
-    var div_1 = document.createElement("div");
-    div_1.className = "col-md-7";
-    div_1.appendChild(header);
-    div_1.appendChild(info);
+    // // Create div for row
+    // var div_row = document.createElement("div");
+    // div_row.className = "row-crit";
+    // div_row.id = "crit_alert_rows";
+    // div_row.appendChild(div_1);
 
-    
-    
-    // Create div for row
-    var div_row = document.createElement("div");
-    div_row.className = "row-crit";
-    div_row.id = "crit_alert_rows";
-    div_row.appendChild(div_1);
-
-    element.appendChild(div_row);
+    // element.appendChild(div_row);
 
 }
 
@@ -149,21 +176,4 @@ function sortbySeverity() {
 
     // Call printing function
     addAllAlerts();
-}
-
-function check_empty() {
-if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
-alert("Fill All Fields !");
-} else {
-document.getElementById('form').submit();
-alert("Form Submitted Successfully...");
-}
-}
-//Function To Display Popup
-function div_show() {
-document.getElementById('abc').style.display = "block";
-}
-//Function to Hide Popup
-function div_hide(){
-document.getElementById('abc').style.display = "none";
 }
