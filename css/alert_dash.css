@@ -88,8 +88,12 @@ position: relative;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  width: 5em;
-  height: 2.5em;
+  width: 4em;
+  height: 1.8em;
+  padding-top: 0.17em;
+  margin-left: 0.6em;
+  margin-top: -12em;
+  margin-bottom: -10em;
 }
 /* Dropdown button on hover & focus */
 #dropbtn:hover, #dropbtn:focus {
@@ -98,9 +102,9 @@ position: relative;
 }
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: absolute;
+  position: relative;
   display: inline-block;
-  padding: 14px;
+  padding: 0px;
   top: -1.4em;
 
 }
@@ -109,10 +113,9 @@ position: relative;
   display: none;
   position: relative;
   background-color: #f1f1f1;
+  margin-top: -0.7em;
+  margin-left: 0.6em;
 
-  margin-right: 0em;
-  margin-left: 50.3em;
-  margin-top: 3.4em;
   min-width: 6em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
