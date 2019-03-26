@@ -80,6 +80,17 @@ position: relative;
   margin-top: 0.3em;
 }
 
+.container-name {
+  display: flex;
+  justify-content: space-between;
+  margin-right: -25.5em;
+  padding-top: 1em;
+}
+
+/* #spacer {
+  flex-grow: <100>;
+} */
+
 /* Dropdown Button */
 #dropbtn {
   background-color: #007bff;
@@ -131,6 +142,10 @@ position: relative;
 .dropdown-content a:hover {background-color: #ddd}
 .show {display:block;}
 
+#crit-alert-rows {
+  display: flex;
+  align-items: flex-end;
+}
 
 /* Edit button - Critical*/
 .btn-primary-edit-crit {
@@ -139,7 +154,7 @@ position: relative;
   border-color: #007bff;
   position: relative;
   left: 10em;
-  top: 6em;
+  bottom: -4em;
   width: 7em;
 }
 
@@ -179,7 +194,8 @@ position: relative;
   border-color: #007bff;
   position: relative;
   left: 11.5em;
-  top: 6em;
+  bottom: -4em;
+
 }
 
 .btn-primary-clear-crit:hover {
