@@ -70,7 +70,7 @@ function addToPageCrit(value, index, array) {
     // Create p tag for alert info
     var info = document.createElement("p");
     info.id = "UID:" + value[5];
-    var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
+    var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + " " + value[7] + "<br>" + value[4];
     if (value[6] != "") {
         alert_string += "<br>Note: " + value[6]
     }
