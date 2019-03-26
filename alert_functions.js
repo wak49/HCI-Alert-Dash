@@ -64,22 +64,29 @@ function addToPageCrit(value, index, array) {
     var element = document.getElementById("crit-alerts");
 
     // Create header 
+    var header_container = document.createElement("div");
+    header_container.className = "container-name";
     var header = document.createElement("h4");
-    header.innerHTML = "Critical Alert(" +value[5] + "): " + value[1] + " " + value[3]
+    header.innerHTML = "Critical Alert(" +value[5] + "): " + value[1];
+    var time = document.createElement("h4");
+    time.innerHTML = value[3];
+    header_container.appendChild(header);
+    header_container.appendChild(time);
+
 
     // Create p tag for alert info
     var info = document.createElement("p");
     info.id = "UID:" + value[5];
-    var alert_string = value[1] + "<br>" + value[2] + "<br>" + value[3] + "<br>" + value[4];
+    var alert_string = value[3] + " " + value[7] + "<br>" + value[4];
     if (value[6] != "") {
-        alert_string += "<br>Note: " + value[6]
+        alert_string += "<br>Note: " + value[6];
     }
     info.innerHTML = alert_string;
 
     // Put header and info in a div
     var div_1 = document.createElement("div");
     div_1.className = "col-md-7";
-    div_1.appendChild(header);
+    div_1.appendChild(header_container);
     div_1.appendChild(info);
 
     //Create buttons
