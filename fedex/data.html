@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedExAlertDashboard</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-right" style="font-size: 24;">Data and Graphs</h2>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-6 col-lg-3">
+                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
+                        <div class="collapse show" id="collapse-2">
+                            <ul class="list-group">
+                                <li class="list-group-item"><span></span><a href="index.html">Alerts</a></li>
+                                <li class="list-group-item"><span><a href="resolved.html">Resolved Alerts</a></span></li>
+                                <li class="list-group-item"><span><a href="data.html">Data and Graphs</a></span></li>
+                                <li class="list-group-item"><span></span>
+                                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">Show Filters</a>
+                                        <div class="collapse" id="collapse-1">
+                                            <p></p>
+                                            <p>Show By Type:</p>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Environmental</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Staff</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Timing</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">Volume</label></div>
+                                            <p></p>
+                                            <p>Sort By:</p>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-5"><label class="form-check-label" for="formCheck-5">Time</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-6"><label class="form-check-label" for="formCheck-6">Type</label></div>
+                                            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-7"><label class="form-check-label" for="formCheck-7">Alert Number</label></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-9">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Data and Graphs go here</td>
+                                </tr>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div><img src="graph.PNG" width="900" height="600"></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
