@@ -53,7 +53,7 @@ buttom_element.appendChild(div_env);
 // Read csv file and generate initial volume graph
 $.ajax({
     type: "GET",  
-    url: "alert_list_graph.csv",
+    url: "assets/alert_list_graph.csv",
     dataType: "text",       
     success: function(response)  
     {
