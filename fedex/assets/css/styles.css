@@ -13,3 +13,76 @@
     color:#111;
     border:1px solid #DCA; 
     background:#fffAF0;}
+
+
+
+.fedex-div {
+    margin-bottom: -5em;
+    margin-left: 3em;
+}
+
+.dash {
+    margin-left: 2.5em;
+}
+
+.sidebar-div {
+    z-index: 1;
+    padding-left: 4em;
+    height: 10em;
+}
+
+.card {
+    height: 25em;
+    margin-bottom: 0.65em;
+}
+
+.critical-card {
+    height: 15em;
+}
+
+.noncrit-col-title {
+
+}
+
+.alert-list {
+    margin-left: -15em;
+    margin-right: -15em;
+    padding-right: -5em;
+    -webkit-column-width: 100rem;
+}
+
+
+
+.noncrit-table-title {
+    font-size: 2.2em;
+    font-weight: 500;
+    padding-top: 1em;
+}
+
+.noncrit-col-title {
+    font-size: 1.3em;
+}
+
+.noncritical-card {
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; */
+    /* flex-flow: column nowrap; */
+    /* align-content: space-between;
+    align-items: flex-end; */
+}
+
+
+.alert-btn {
+    width: 6.4em;
+    font-size: 0.75em;
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+    margin-bottom: 0em;
+    margin-top: auto;
+    z-index: 10;
+    /* align-self: flex-end; */
+
+}

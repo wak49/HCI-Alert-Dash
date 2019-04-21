@@ -89,16 +89,16 @@ function printNonCriticalAlerts() {
         var header_1 = document.createElement("h4");
         header_1.className = "card-title";
         var header_2 = document.createElement("h6");
-        header_2.className = "text warning card-subtitle mb-2";
+        header_2.className = "text-warning card-subtitle mb-2";
         var p = document.createElement("p");
         p.className = "card-text";
         p.style = "height: 120px;";
         var button_addnote = document.createElement("button");
-        button_addnote.className = "btn btn-primary";
+        button_addnote.className = "btn btn-primary alert-btn";
         button_addnote.type = "button";
         button_addnote.innerHTML = "Add Note";
         var button_dismiss = document.createElement("button");
-        button_dismiss.className = "btn btn-primary";
+        button_dismiss.className = "btn btn-primary alert-btn";
         button_dismiss.type = "button";
         button_dismiss.innerHTML = "Dismiss";
 

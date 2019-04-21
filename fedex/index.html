@@ -14,14 +14,17 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4 fedex-div">
+                        <h2 class="text-left" style="font-size: 24;">&nbsp;FedEx</h2>
+                    </div>
+                <div class="col-md-11 dash">
                     <h2 class="text-right" style="font-size: 24;">&nbsp;Alert Dashboard</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
-                        <div class="collapse show" id="collapse-2">
+                <div class="col-md-6 col-lg-3 sidebar-div">
+                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
+                        <div class="collapse hide" id="collapse-2">
                             <ul class="list-group">
                                 <li class="list-group-item"><span></span><a href="index.html">Alerts</a></li>
                                 <li class="list-group-item"><span><a href="resolved.html">Resolved Alerts</a></span></li>
@@ -47,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-9">
+                <div class="col-md-6 col-lg-11 alert-list">
                     <p class="text-right" style="font-size: 12;"><a class="text-right" href="#nca" style="font-size: 12;">Jump to Non-critical Alerts</a></p>
                     <div class="table-responsive">
                         <table class="table table-sm">
@@ -57,9 +60,9 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <div class="card">
+                                        <div class="card critical-card">
                                             <div class="card-body">
-                                                <h4 class="card-title" style="background-color: #f80505;padding: 1;">Critical Alert(10)</h4>
+                                                <h4 class="card-title critical-title">Critical Alert(10)</h4>
                                                 <h6 class="text-muted card-subtitle mb-2">Volume &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; November 23, 2018 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                                     &nbsp; &nbsp; &nbsp;8:03A.M.</h6>
                                                 <p class="card-text">Description: &nbsp;Black Friday Rush</p>
@@ -105,15 +108,15 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <p class="text-left" id="nca">Non-critical Alerts &nbsp;(should this be here? &nbsp;how should it look? bold? color?)</p>
+                                        <p class="text-left noncrit-table-title" id="nca">Non-critical Alerts</p>
                                         <div class="table-responsive">
                                             <table class="table table-sm">
                                                 <thead>
                                                     <tr>
-                                                        <th>Volume</th>
-                                                        <th>Timing</th>
-                                                        <th>Staff</th>
-                                                        <th>Environment</th>
+                                                        <th class="text-center noncrit-col-title">Volume</th>
+                                                        <th class="text-center noncrit-col-title">Timing</th>
+                                                        <th class="text-center noncrit-col-title">Staff</th>
+                                                        <th class="text-center noncrit-col-title">Environment</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
