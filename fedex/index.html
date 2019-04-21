@@ -118,15 +118,16 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td style="width: 25%;">
+                                                        <td id="volume" style="width: 25%;">
                                                             <div class="card d-lg-flex align-items-lg-start" style="width: 250;height: 250;">
                                                                 <div class="card-body">
                                                                     <h6 class="card-title">Additional In-bound Plane</h6>
                                                                     <h6 class="text-warning card-subtitle mb-2">Moderate</h6>
                                                                     <p class="card-text" style="height: 120px;">Additional plane in bound.</p><button class="btn btn-primary" type="button" style="width: 60px;height: 30px;font-size: 10px;">Dismiss</button></div>
                                                             </div>
+                                                            
                                                         </td>
-                                                        <td>
+                                                        <td id="timing">
                                                             <div class="card">
                                                                 <div class="card-body" style="/*width: 250;*/height: 250;">
                                                                     <h6 class="card-title">Late Plane</h6>
@@ -134,7 +135,7 @@
                                                                     <p class="card-text" style="height: 120px;">Late plane due to FAA outage.</p><a class="card-link" href="#">Add Note</a><a class="card-link" href="#">Dismiss</a></div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 25%;">
+                                                        <td id="staff" style="width: 25%;">
                                                             <div class="card">
                                                                 <div class="card-body">
                                                                     <h6 class="card-title">Staff Shortage</h6>
@@ -142,7 +143,7 @@
                                                                     <p class="card-text" style="height: 120px;">Shortage of non-critical staff.</p><a class="card-link" href="#">Add Note</a><a class="card-link" href="#">Dismiss</a></div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 25%;">
+                                                        <td id="environmental" style="width: 25%;">
                                                             <div class="card">
                                                                 <div class="card-body">
                                                                     <h6 class="card-title">Environmental</h6>
@@ -199,6 +200,8 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script src="assets/js/alert.js"></script>
 </body>
 
 </html>
