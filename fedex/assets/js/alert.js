@@ -11,6 +11,7 @@ function Alert(title, type, severity, time, description, uid, note) {
 
 var alert_list = [];
 var critical_alert_list = [];
+var resolved_alerts = [];
 
 // Read in from CSV file and calls getData to populate alert_list
 $.ajax({
@@ -60,6 +61,22 @@ function printNonCriticalAlerts() {
     var staff = document.getElementById("staff");
     var environmental = document.getElementById("environmental");
 
+    // Clear the elements
+    while (volume.firstChild) {
+        volume.removeChild(volume.firstChild);
+    }
+    while (timing.firstChild) {
+        timing.removeChild(timing.firstChild);
+    }
+    while (staff.firstChild) {
+        staff.removeChild(staff.firstChild);
+    }
+    while (environmental.firstChild) {
+        environmental.removeChild(environmental.firstChild);
+    }
+
+    console.log("Alert list at printing: ", alert_list);
+
     // Loop for each item in alert_list
     for (var i = 0; i < alert_list.length; i++){
 
@@ -76,19 +93,33 @@ function printNonCriticalAlerts() {
         var p = document.createElement("p");
         p.className = "card-text";
         p.style = "height: 120px;";
+        var button_addnote = document.createElement("button");
+        button_addnote.className = "btn btn-primary";
+        button_addnote.type = "button";
+        button_addnote.innerHTML = "Add Note";
+        var button_dismiss = document.createElement("button");
+        button_dismiss.className = "btn btn-primary";
+        button_dismiss.type = "button";
+        button_dismiss.innerHTML = "Dismiss";
 
         // Add alert information to the elements
         header_1.innerHTML = alert_list[i].title;
         header_2.innerHTML = alert_list[i].severity;
         p.innerHTML = alert_list[i].description;
         if (alert_list[i].note != ""){
-            p.innerHTML += alert_list[i].note;
+            p.innerHTML += "<br>" + alert_list[i].note;
         }
+
+        // Add button functionality
+        button_addnote.onclick = addNote(i);
+        button_dismiss.onclick = dismissAlert(i);
 
         // Add elements together
         div_innerbody.appendChild(header_1);
         div_innerbody.appendChild(header_2);
         div_innerbody.appendChild(p);
+        div_innerbody.appendChild(button_addnote);
+        div_innerbody.appendChild(button_dismiss);
         div.appendChild(div_innerbody);
 
         // Add elements to table
@@ -108,4 +139,37 @@ function printNonCriticalAlerts() {
     }
 }
 
+// Add note to a card
+function addNote(i) {
+    return function() {
+        // Open dialog box and get user's input
+        // For now, just assume user input is "There is a new note!"
+        // Append note to alert and print everything again
+        var new_note = "There is a new note!";
+        if (alert_list[i].note == "") {
+            alert_list[i].note += new_note;
+        }
+        else {
+            alert_list[i].note += "<br>" + new_note;
+        }
+        
+        printNonCriticalAlerts();
+        return false;
+    };
+}
+
+// Dismiss alert
+function dismissAlert(i) {
+    return function() {
+
+        var temp = alert_list[i]
+
+        // Remove alert from alert_list, add it to resolved list and reprint everything
+        alert_list.splice(i, 1);
+        resolved_alerts.push(temp);
+        printNonCriticalAlerts();
+
+        return false;
+    };
+}
 
