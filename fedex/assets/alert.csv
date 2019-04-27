@@ -2,7 +2,6 @@ Title,Type,Severity,Time,Description,UID,Note
 Additional inbound plane,Volume,Critical,09:24 3/25/19,"Inbound plane from Seattle, WA",0,,None
 Additional inbound truck,Volume,Critical,08:35 3/25/19,"Inbound truck from Atlanta, GA",1,None
 Additional inbound plane,Volume,Moderate,09:24 3/25/19,"Inbound plane from Seattle, WA",0,,None
-Additional inbound truck,Volume,Moderate,08:35 3/25/19,"Inbound truck from Atlanta, GA",1,None
 Late Plane,Timing,Critical,12:05 3/25/19,Original arrival time 11:30 3/25/19,2,None
 Unexpected ratio of time-definite services in inbound volume,Timing,Moderate,15:01 3/25/19,Black Friday,3,None
 Unscheduled employees on the clock,Staff,Moderate,13:12 3/25/19,3 employees since 8:00 3/25/19,4,None
@@ -14,3 +13,5 @@ Plane Crash,Staff,Critical,9:00 2/6/19,Boeing 737 Max,9,None
 Black Friday,Volume,Critical,23:00 11/15/19,Thanksgiving rush,10,None
 Possible Blizzard Conditions,Volume,Moderate,11:11 3/1/19,Snow,11,None
 Possible Blizzard Conditions,Environmental,Moderate, 11:11 3/1/19,Snow,12,None
+Plan exceeds employee count,Staff,Moderate,13:12 3/25/19,5 employees since 8:00 3/25/19,4,None
+Late Plane,Timing,Moderate,12:05 3/25/19,Original arrival time 8:30 3/25/19,2,None

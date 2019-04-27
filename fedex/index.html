@@ -58,18 +58,18 @@
                                 <tr></tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="critical-card-1">
                                     <td id="critical">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h4 class="card-title" style="background-color: #f80505;">Critical Alert(10)</h4>
-                                                <h6 class="text-muted card-subtitle mb-2">Volume &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; November 23, 2018 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                                    &nbsp; &nbsp; &nbsp;8:03A.M.</h6>
+                                                <h4 class="card-title text-danger">Critical Alert (10)</h4>
+                                                <h6 class="text-muted card-subtitle mb-2">Volume &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;November 23, 2018
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;8:03A.M.</h6>
                                                 <p class="card-text">Description: &nbsp;Black Friday Rush</p>
-                                                <p>Added Note would go here. &nbsp;Dismiss inactive until note added.</p>												
+                                                <p id="critical-alert-1">Added Note would go here. &nbsp;Dismiss inactive until note added.</p>												
 												<!-- <a class="card-link" href="#">Add Note</a><a class="card-link" href="#"><span style="text-decoration: line-through;">Dismiss</span></a> -->
-												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 10px;">Add Note</button>
-												<button class="btn btn-primary" disabled="true" type="button" style="width: 80px;height: 40px;font-size: 10px;">Dismiss</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-alert-1').innerHTML += addNoteCritical()">Add Note</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-card-1').innerHTML = null">Dismiss</button>
 												</div>
 											</div>
 												
@@ -78,50 +78,50 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="critical-card-2">
                                     <td>
-                                        <div class="card">
+                                        <div class="card ">
                                             <div class="card-body">
-                                                <h4 class="card-title" style="background-color: #f80505;">Critical Alert(8)</h4>
-                                                <h6 class="text-muted card-subtitle mb-2">Type of Alert &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Time</h6>
+                                                <h4 class="card-title text-danger">Critical Alert (8)</h4>
+                                                <h6 class="text-muted card-subtitle mb-2">Type of Alert &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Date
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Time</h6>
                                                 <p class="card-text">Description: Flu</p>
-                                                <p>Additional Drivers Dispatched</p>
+                                                <p id="critical-alert-2">Additional Drivers Dispatched</p>
 												<!-- <a class="card-link" href="#">Add Note</a><a class="card-link" href="#"><span style="text-decoration: line-through;">Dismiss</span></a> -->
-												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 10px;">Add Note</button>
-												<button class="btn btn-primary" disabled="true" type="button" style="width: 80px;height: 40px;font-size: 10px;">Dismiss</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-alert-2').innerHTML += addNoteCritical()">Add Note</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-card-2').innerHTML = null">Dismiss</button>
 												</div>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="critical-card-3">
                                     <td>
                                         <div class="card">
                                             <div class="card-body">
-                                                <h4 class="card-title" style="background-color: #f80505;">Critical Alert(9)</h4>
-                                                <h6 class="text-muted card-subtitle mb-2">Type of Alert &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Time</h6>
+                                                <h4 class="card-title text-danger">Critical Alert (9)</h4>
+                                                <h6 class="text-muted card-subtitle mb-2">Type of Alert &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Date
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Time</h6>
                                                 <p class="card-text">Description: Timing Alert.</p>
-                                                <p>Additional Drivers Dispatched</p>
+                                                <p id="critical-alert-3">Additional Drivers Dispatched</p>
 												<!-- <a class="card-link" href="#">Add Note</a><a class="card-link" href="#"><span style="text-decoration: line-through;">Dismiss</span></a> -->
-												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 10px;">Add Note</button>
-												<button class="btn btn-primary" disabled="false" type="button" style="width: 80px;height: 40px;font-size: 10px;">Dismiss</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-alert-3').innerHTML += addNoteCritical()">Add Note</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-card-3').innerHTML = null">Dismiss</button>
 												</div>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr id="critical-card-4">
                                     <td>
                                         <div class="card">
                                             <div class="card-body">
-                                                <h4 class="card-title" style="background-color: #f80505;">Critical Alert(7)</h4>
-                                                <h6 class="text-muted card-subtitle mb-2">Environmental&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Time</h6>
+                                                <h4 class="card-title text-danger">Critical Alert (7)</h4>
+                                                <h6 class="text-muted card-subtitle mb-2">Type of Alert &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Date
+                                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Time</h6>
                                                 <p class="card-text">Description: Snow Storm has grouned flights</p>
-                                                <p>Added Note goes here.</p>
+                                                <p id="critical-alert-4">Added Note goes here.</p>
 												<!-- <a class="card-link" href="#">Add Note</a><a class="card-link" href="#"><span style="text-decoration: line-through;">Dismiss</span></a> -->
-												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 10px;">Add Note</button>
-												<button class="btn btn-primary" disabled="false" type="button" style="width: 80px;height: 40px;font-size: 10px;">Dismiss</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-alert-4').innerHTML += addNoteCritical()">Add Note</button>
+												<button class="btn btn-primary" type="button" style="width: 80px;height: 40px;font-size: 12px;" onclick="getElementById('critical-card-4').innerHTML = null">Dismiss</button>
 												</div>
                                         </div>
                                     </td>

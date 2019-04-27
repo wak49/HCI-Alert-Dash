@@ -5,16 +5,22 @@
     margin-top:-30px; 
     margin-left:28px;
     width:300px; 
-    line-height:16px;
+    line-height:32px;
+    
 }
 .notes:hover .spanTooltip{
-    display:inline;
+    display:table;
     position: absolute; 
     color:#111;
-    border:1px solid #DCA; 
-    background:#fffAF0;}
+    border:1px solid black; 
+    background: white;
+    margin-left: -.051em;
+    margin-top: .3em;
 
+    height: 2.25em;
 
+    overflow-wrap: normal;
+}
 
 .fedex-div {
     margin-bottom: -5em;
@@ -31,17 +37,13 @@
     height: 10em;
 }
 
+.critical-alerts {
+    color: red;
+}
+
 .card {
-    height: 25em;
+    height: 20em;
     margin-bottom: 0.65em;
-}
-
-.critical-card {
-    height: 15em;
-}
-
-.noncrit-col-title {
-
 }
 
 .alert-list {
@@ -51,7 +53,21 @@
     -webkit-column-width: 100rem;
 }
 
+.resolved-list{
+    margin-left: -15em;
+    margin-right: -15em;
+    padding-right: -5em;
+    margin-top: 4em;
+    -webkit-column-width: 100rem;
+}
 
+.alert-graph {
+    margin-left: -15em;
+    margin-right: -15em;
+    padding-right: -5em;
+    margin-top: 4em;
+    -webkit-column-width: 100rem;
+}
 
 .noncrit-table-title {
     font-size: 2.2em;
@@ -63,26 +79,30 @@
     font-size: 1.3em;
 }
 
-.noncritical-card {
-    /* display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start; */
-    /* flex-flow: column nowrap; */
-    /* align-content: space-between;
-    align-items: flex-end; */
-}
-
-
-.alert-btn {
+.alert-btn-add {
+    position: absolute;
     width: 6.4em;
     font-size: 0.75em;
     padding-left: 0em;
     padding-right: 0em;
-    margin-left: -1em;
+    margin-left: 0.7em;
     margin-right: 0.5em;
     margin-bottom: 0em;
     margin-top: auto;
     z-index: 10;
-    /* align-self: flex-end; */
+    bottom: 2.5em;
+}
 
+.alert-btn-dismiss {
+    position: absolute;
+    width: 6.4em;
+    font-size: 0.75em;
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: 9.3em;
+    margin-right: 0.5em;
+    margin-bottom: 0em;
+    margin-top: auto;
+    z-index: 10;
+    bottom: 2.5em;
 }

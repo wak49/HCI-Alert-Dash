@@ -14,20 +14,23 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4 fedex-div">
+                        <h2 class="text-left" style="font-size: 24;">&nbsp;FedEx</h2>
+                </div>
+                <div class="col-md-11">
                     <h2 class="text-right" style="font-size: 24;">Data and Graphs</h2>
                 </div>
             </div>
-            <div class="row no-gutters">
-                <div class="col-md-6 col-lg-3">
-                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
-                        <div class="collapse show" id="collapse-2">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 sidebar-div">
+                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
+                        <div class="collapse hide" id="collapse-2">
                             <ul class="list-group">
                                 <li class="list-group-item"><span></span><a href="index.html">Alerts</a></li>
                                 <li class="list-group-item"><span><a href="resolved.html">Resolved Alerts</a></span></li>
                                 <li class="list-group-item"><span><a href="data.html">Data and Graphs</a></span></li>
                                 <li class="list-group-item"><span></span>
-                                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">Show Filters</a>
+                                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">Filter</a>
                                         <div class="collapse" id="collapse-1">
                                             <p></p>
                                             <p>Show By Type:</p>
@@ -47,24 +50,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-9">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Data and Graphs go here</td>
-                                </tr>
-                                <tr></tr>
-                            </tbody>
-                        </table>
-                    
+                <div class="col-md-6 col-lg-11 alert-graph">
                     <div id="chart-container" class="container">
                         <canvas id="myChart"></canvas></div>
                     <div id="other-alerts" class="row text-center"></div>
-            </div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

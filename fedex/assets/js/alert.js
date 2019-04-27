@@ -94,11 +94,11 @@ function printNonCriticalAlerts() {
         p.className = "card-text";
         p.style = "height: 120px;";
         var button_addnote = document.createElement("button");
-        button_addnote.className = "btn btn-primary alert-btn";
+        button_addnote.className = "btn btn-primary alert-btn-add";
         button_addnote.type = "button";
         button_addnote.innerHTML = "Add Note";
         var button_dismiss = document.createElement("button");
-        button_dismiss.className = "btn btn-primary alert-btn";
+        button_dismiss.className = "btn btn-primary alert-btn-dismiss";
         button_dismiss.type = "button";
         button_dismiss.innerHTML = "Dismiss";
 
@@ -143,9 +143,10 @@ function printNonCriticalAlerts() {
 function addNote(i) {
     return function() {
         // Open dialog box and get user's input
-        // For now, just assume user input is "There is a new note!"
         // Append note to alert and print everything again
-        var new_note = "There is a new note!";
+        prompt_string = "Enter a note for the alert: ";
+        var new_note = "<br>";
+        new_note += prompt(prompt_string);
         if (alert_list[i].note == "") {
             alert_list[i].note += new_note;
         }
@@ -173,3 +174,12 @@ function dismissAlert(i) {
     };
 }
 
+
+// add note button for critical alert
+function addNoteCritical(){
+    prompt_string = "Enter a note for the alert: ";
+    var note = "<br>";
+    note += prompt(prompt_string);
+    return note;
+
+}

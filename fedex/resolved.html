@@ -14,21 +14,24 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4 fedex-div">
+                            <h2 class="text-left" style="font-size: 24;">&nbsp;FedEx</h2>
+                </div>
+                <div class="col-md-11">
                     <h2 class="text-right" style="font-size: 24;">Resolved Alerts</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
-                        <div class="collapse show" id="collapse-2">
+                <div class="col-md-6 col-lg-3 sidebar-div">
+                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" href="#collapse-2" role="button">Show Sidebar</a>
+                        <div class="collapse hide" id="collapse-2">
                             <ul class="list-group">
                                 <li class="list-group-item"><span></span><a href="index.html">Alerts</a></li>
                                 <li class="list-group-item"><span><a href="resolved.html">Resolved Alerts</a></span></li>
                                 <li class="list-group-item"><span><a href="data.html">Data and Graphs</a></span></li>
                                 <li class="list-group-item"><span></span>
-                                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="true" aria-controls="collapse-1" href="#collapse-1" role="button">Show Filters</a>
-                                        <div class="collapse show" id="collapse-1">
+                                    <div><a class="btn btn-primary" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">Filter</a>
+                                        <div class="collapse hide" id="collapse-1">
                                             <p></p>
                                             <p>Show By Type:</p>
                                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Environmental</label></div>
@@ -47,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-9">
+                <div class="col-md-6 col-lg-11 resolved-list">
                     <div class="table-responsive text-truncate">
                         <table class="table table-sm">
                             <thead>
@@ -73,68 +76,82 @@
                                                     <tr>
                                                         <td class="text-danger">Critical Alert</td>
                                                         <td>Environmental</td>
-                                                        <td class="notes"><span>If the we....</span>
-                                                            <span class="spanTooltip">If the weather is poor.</span></td>
+                                                        <td class="notes"><span>If the wea....</span>
+                                                            <div class="spanTooltip">If the weather is poor.</div></td>
                                                         <td class="notes"><span>Is too long...</span>
-                                                            <span class="spanTooltip">Is too long for vehicles to arrive on time.</span></td>
+                                                            <div class="spanTooltip">Is too long for vehicles to arrive on time.</div></td>
                                                         <td>11/08/18 13:02</td>
                                                     </tr>
                                                     <tr> 
                                                         <td class="text-success">Low</td>
                                                         <td>Timing</td>
-                                                        <td class="notes"><span>The truck fro...</span>
-                                                            <span class="spanTooltip">The truck from Jackson, MS will be arrive at 9:45 A.M.</span></td>
-                                                        <td class="notes"><span>And can be..</span>
-                                                            <span class="spanTooltip">And can be an additional 1 hour late.</span></td>
+                                                        <td class="notes"><span>The truck....</span>
+                                                            <div class="spanTooltip">The truck from Jackson, MS will be arriving at 9:45 A.M.</div></td>
+                                                        <td class="notes"><span>And can b....</span>
+                                                            <div class="spanTooltip">And can be an additional 1 hour late.</div></td>
                                                         <td>11/07/18 08:08</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-danger">Critical Alert</td>
                                                         <td>Staff</td>
-                                                        <td>Hovered...</td>
-                                                        <td>Over to dis...</td>
+                                                        <td class="notes"><span>Staff plan....</span>
+                                                            <div class="spanTooltip">Staff plan exceeds employee count.</div></td>
+                                                        <td class="notes"><span>Over to di....</span>
+                                                            <div class="spanTooltip">Over to discover notes.</div></td>
                                                         <td>11/07/18 02:55</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-danger">Critical Alert</td>
                                                         <td>Volume</td>
-                                                        <td>Display the..</td>
-                                                        <td>Rest of it...</td>
+                                                        <td class="notes"><span>Display th....</span>
+                                                            <div class="spanTooltip">Display the volume alert.</div></td>
+                                                        <td class="notes"><span>The rest o....</span>
+                                                            <div class="spanTooltip">The rest of the alert is shown here.</div></td>
                                                         <td>11/06/18 04:19</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-warning">Moderate</td>
                                                         <td>Environmental</td>
-                                                        <td>This is NYI</td>
-                                                        <td>This is NYI</td>
+                                                        <td class="notes"><span>Tornado w....</span>
+                                                            <div class="spanTooltip">Tornado warning in effect until 9:00 AM.</div></td>
+                                                        <td class="notes"><span>The warni....</span>
+                                                            <div class="spanTooltip">The warning covers the following counties.</div></td>
                                                         <td>Date and Time</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-danger">Critical Alert</td>
                                                         <td>Staff</td>
-                                                        <td>Description</td>
-                                                        <td>Added Note</td>
+                                                        <td class="notes"><span>Display the....</span>
+                                                            <div class="spanTooltip">Display the volume alert.</div></td>
+                                                        <td class="notes"><span>The rest o....</span>
+                                                            <div class="spanTooltip">The rest of the alert is shown here.</div></td>
                                                         <td>Date and Time</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-warning">Moderate</td>
                                                         <td>Timing</td>
-                                                        <td>Description</td>
-                                                        <td>Added Note</td>
+                                                        <td class="notes"><span>Display the....</span>
+                                                            <div class="spanTooltip">Display the volume alert.</div></td>
+                                                        <td class="notes"><span>The rest o....</span>
+                                                            <div class="spanTooltip">The rest of the alert is shown here.</div></td>
                                                         <td>Date and Time</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-success">Low</td>
                                                         <td>Volume</td>
-                                                        <td>Description</td>
-                                                        <td>Added Note</td>
+                                                        <td class="notes"><span>Display the....</span>
+                                                            <div class="spanTooltip">Display the volume alert.</div></td>
+                                                        <td class="notes"><span>The rest o....</span>
+                                                            <div class="spanTooltip">The rest of the alert is shown here.</div></td>
                                                         <td>Date and Time</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-danger">Critical Alert</td>
                                                         <td>Volums</td>
-                                                        <td>Description</td>
-                                                        <td>Added Note</td>
+                                                        <td class="notes"><span>Display the....</span>
+                                                            <div class="spanTooltip">Display the volume alert.</div></td>
+                                                        <td class="notes"><span>The rest o....</span>
+                                                            <div class="spanTooltip">The rest of the alert is shown here.</div></td>
                                                         <td>Date and Time</td>
                                                     </tr>
                                                     <tr></tr>
