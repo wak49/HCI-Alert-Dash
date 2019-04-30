@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>traffic-light</title>
+  
+  
+  
+      <style>
+      body {
+  background-image: url(https://f.cl.ly/items/2K0P3z2y3X3c052f2B3Y/Image%202013.04.30%2021%3A28%3A02.png);
+}
+#traffic-light {
+  position: absolute;
+  display: block;
+  left: 25%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -300px;
+  background-color: #333;
+  width: 240px;
+  height: 640px;
+  border-radius: 30px;
+}
+input {
+  appearance: none;
+  position: relative;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  margin-top: 40px;
+  margin-left: -80px;
+  background-color: grey;
+  vertical-align: middle;
+  border-radius: 100%;
+  display: block;
+}
+#horz_ili {
+  position: absolute;
+  left: 0%;
+  top: 100%;
+ 
+}
+
+input#color1 {
+  background-color: #b30000;
+}
+
+input#color1:checked {
+  background-color: #FF0000;
+  box-shadow: 0 0 6em #ff3333;
+}
+input#color2 {
+  background-color: #b2b300;
+}
+
+input#color2:checked {
+  background-color: #FFFF00;
+  box-shadow: 0 0 6em #ffff33;
+}
+input#color3 {
+  background-color: #00b300;
+}
+
+input#color3:checked {
+  background-color: #00FF00;
+  box-shadow: 0 0 6em #33ff33;
+}
+* {
+  user-select: none;
+  outline: none;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="traffic-light">
+  <input type="radio" name="traffic-light-color" id="color1" value="color1" />
+  <input type="radio" name="traffic-light-color" id="color2" value="color2"/>
+  <input type="radio" name="traffic-light-color" id="color3" value="colo3" />
+</div>
+<div id="horz_ili"><P><P><P><P>
+<img src="ili.PNG" align="center">
+</div>  
+  
+
+</body>
+
+</html>
